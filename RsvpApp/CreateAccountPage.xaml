@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RsvpApp.Pages.CreateAccountPage"
+             Title="Create Account">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="14">
+            <Label Text="Create Account" Style="{StaticResource Heading}" />
+            <Entry x:Name="NameEntry" Placeholder="Full name" />
+            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+            <Label x:Name="ErrorLabel" TextColor="#D32F2F" IsVisible="False" />
+
+            <Button Text="Create Account" Style="{StaticResource PrimaryButton}" Clicked="OnCreateClicked" />
+            <Button Text="Cancel" Style="{StaticResource LinkButton}" Clicked="OnCancelClicked" />
+            <Button Text="Back to Login" Style="{StaticResource LinkButton}" Clicked="OnCancelClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

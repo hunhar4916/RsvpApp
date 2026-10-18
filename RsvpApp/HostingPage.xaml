@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RsvpApp.Pages.HostingPage"
+             Title="Hosting">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log Out" Clicked="OnLogOutClicked" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <CollectionView x:Name="EventsList"
+                        SelectionMode="Single"
+                        SelectionChanged="OnEventSelected"
+                        ItemTemplate="{StaticResource EventCardTemplate}" />
+
+        <!-- Orange "+" button: Add Event -->
+        <Button Text="+" FontSize="30" Style="{StaticResource AccentButton}"
+                WidthRequest="60" HeightRequest="60" CornerRadius="30" Padding="0"
+                HorizontalOptions="End" VerticalOptions="End" Margin="20"
+                Clicked="OnAddClicked" />
+    </Grid>
+</ContentPage>

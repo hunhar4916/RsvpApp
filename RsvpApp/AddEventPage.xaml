@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RsvpApp.Pages.AddEventPage"
+             Title="Add Event">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="12">
+            <Label Text="Title" />
+            <Entry x:Name="TitleEntry" Placeholder="Event title" />
+
+            <Label Text="Description" />
+            <Editor x:Name="DescriptionEditor" Placeholder="What is it about?" HeightRequest="100" />
+
+            <Label Text="Date" />
+            <DatePicker x:Name="EventDatePicker" />
+
+            <Label Text="Time" />
+            <TimePicker x:Name="EventTimePicker" />
+
+            <Label Text="Location" />
+            <Entry x:Name="LocationEntry" Placeholder="Where is it?" />
+
+            <Label x:Name="ErrorLabel" TextColor="#D32F2F" IsVisible="False" />
+
+            <Button Text="Save" Style="{StaticResource PrimaryButton}" Clicked="OnSaveClicked" />
+            <Button Text="Cancel" Style="{StaticResource LinkButton}" Clicked="OnCancelClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

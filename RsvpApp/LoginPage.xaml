@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RsvpApp.Pages.LoginPage"
+             Title="Log In"
+             Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout Padding="24,60,24,24" Spacing="14">
+            <Label Text="RSVP" Style="{StaticResource Heading}" FontSize="36"
+                   TextColor="{StaticResource Brand}" HorizontalOptions="Center" />
+            <Label Text="Sign in to see upcoming events" HorizontalOptions="Center" />
+
+            <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+            <Label x:Name="ErrorLabel" TextColor="#D32F2F" IsVisible="False" />
+
+            <Button Text="Log In" Style="{StaticResource PrimaryButton}" Clicked="OnLogInClicked" />
+            <Button Text="Continue as Guest" Style="{StaticResource LinkButton}" Clicked="OnGuestClicked" />
+            <Button Text="Create Account" Style="{StaticResource LinkButton}" Clicked="OnCreateAccountClicked" />
+
+            <Label Text="Demo login: test@rsvp.com / password123"
+                   FontSize="12" TextColor="#757575" HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

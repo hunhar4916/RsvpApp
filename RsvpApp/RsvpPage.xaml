@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RsvpApp.Pages.RsvpPage"
+             Title="RSVP">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="12">
+            <Label x:Name="EventTitleLabel" Style="{StaticResource Heading}" FontSize="20" />
+
+            <Label Text="Name" />
+            <Entry x:Name="NameEntry" Placeholder="Your name" />
+
+            <Label Text="Email" />
+            <Entry x:Name="EmailEntry" Placeholder="Your email" Keyboard="Email" />
+
+            <Label Text="Phone" />
+            <Entry x:Name="PhoneEntry" Placeholder="Your phone" Keyboard="Telephone" />
+
+            <Label Text="Number of guests (including you)" />
+            <Entry x:Name="GuestCountEntry" Placeholder="1" Keyboard="Numeric" />
+
+            <Label x:Name="ErrorLabel" TextColor="#D32F2F" IsVisible="False" />
+
+            <Button Text="Save RSVP" Style="{StaticResource AccentButton}" Clicked="OnSaveClicked" />
+            <Button Text="Cancel" Style="{StaticResource LinkButton}" Clicked="OnCancelClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
